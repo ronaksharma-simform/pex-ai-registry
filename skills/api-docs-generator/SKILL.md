@@ -1,6 +1,6 @@
 ---
 name: api-docs-generator
-description: Generate comprehensive API reference documentation with endpoint specs, auth, and examples
+description: Generate a comprehensive API reference documentation with endpoint specs, auth, and examples
 stage: documentation
 triggers:
   - api docs
@@ -12,7 +12,7 @@ triggers:
 prerequisites:
   - docx
 output_format: docx
-version: 2
+version: 3
 ---
 
 # API Docs Generator Skill
