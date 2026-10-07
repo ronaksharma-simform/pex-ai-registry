@@ -1,0 +1,10 @@
+dsl: 1
+name: pex-demo-flow
+version: "1.0.0"
+description: Demo flow.
+entry: plan
+nodes:
+  - { id: plan, kind: agent, ui: { label: Planning } }
+  - { id: build, kind: agent }
+edges:
+  - { from: plan, to: build }
