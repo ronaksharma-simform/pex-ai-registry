@@ -1,0 +1,14 @@
+dsl: 1
+name: feature-delivery
+version: "1.0.0"
+description: Plan, implement, review and open a pull request for a feature.
+entry: plan
+nodes:
+  - { id: plan, kind: agent, ref: agents/discovery-agent, ui: { label: Planning } }
+  - { id: implement, kind: agent, ref: agents/development-agent, ui: { label: Implementing } }
+  - { id: review, kind: agent, ref: agents/code-reviewer, ui: { label: Reviewing } }
+  - { id: create_pr, kind: action, ui: { label: Open pull request } }
+edges:
+  - { from: plan, to: implement }
+  - { from: implement, to: review }
+  - { from: review, to: create_pr }

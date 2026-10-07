@@ -23,3 +23,6 @@ Use this to place each outdated package in a group.
 ## Before each step
 - Read the package's release notes for the versions in between.
 - Run the full test suite on a clean install of the lockfile.
+
+## Before each step
+- Check that the lockfile is committed and the working tree is clean.
