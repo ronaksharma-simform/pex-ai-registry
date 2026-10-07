@@ -20,3 +20,5 @@
 ```
 
 Leave out any heading that has no entries.
+
+Keep each entry to one sentence.
