@@ -4,7 +4,6 @@ description: Generates API reference docs, deployment runbooks, and technical ov
 stage: documentation
 skills:
   - api-docs-generator
-  - runbook-generator
   - tech-overview-generator
 capabilities:
   - context.read
