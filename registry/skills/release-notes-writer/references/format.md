@@ -22,3 +22,6 @@
 Leave out any heading that has no entries.
 
 Keep each entry to one sentence.
+
+## Reminder
+The last heading in every report is the follow-up table.
