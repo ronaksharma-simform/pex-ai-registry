@@ -1,0 +1,14 @@
+dsl: 1
+name: bug-fix-broken
+version: "1.0.0"
+description: Deliberately broken, to see the agent errors in the sync log.
+entry: find_bug
+nodes:
+  - { id: find_bug, kind: agent, ui: { label: No ref at all } }
+  - { id: fix_bug, kind: agent, ref: agents/ghost-planner, ui: { label: Agent that does not exist } }
+  - { id: test_bug, kind: agent, ref: agents/qa-agent@1.0.0, ui: { label: Agent with a version } }
+  - { id: approve, kind: human, ref: agents/code-reviewer }
+  - { id: each_file, kind: foreach }
+  - { id: open_pr, kind: action, ui: { label: Action with no ref } }
+edges:
+  - { from: find_bug, to: fix_bug }
