@@ -1,0 +1,18 @@
+dsl: 1
+name: bug-fix
+version: "1.0.0"
+description: Find a bug, fix it, check the fix in parallel, then a person approves and a pull request is opened.
+entry: find_bug
+nodes:
+  - { id: find_bug, kind: agent, ref: agents/discovery-agent, ui: { label: Finding the bug } }
+  - { id: fix_bug, kind: agent, ref: agents/development-agent, ui: { label: Fixing the bug } }
+  - { id: checks, kind: parallel, branches: { review: [code_review], tests: [run_tests] } }
+  - { id: code_review, kind: agent, ref: agents/code-reviewer, ui: { label: Reviewing the fix } }
+  - { id: run_tests, kind: agent, ref: agents/qa-agent, ui: { label: Testing the fix } }
+  - { id: approve, kind: human, ref: reviews/fix-approval }
+  - { id: open_pr, kind: action, ref: actions/open-pull-request, ui: { label: Open pull request } }
+edges:
+  - { from: find_bug, to: fix_bug }
+  - { from: fix_bug, to: checks }
+  - { from: checks, to: approve }
+  - { from: approve, to: open_pr }
