@@ -6,3 +6,5 @@ description: This skill has a folder name with capitals and underscores, which i
 # Bad skill name
 
 Body text.
+
+Edited to trigger a sync that is expected to fail.
