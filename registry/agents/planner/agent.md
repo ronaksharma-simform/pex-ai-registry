@@ -67,7 +67,7 @@ Keep it to one feature. If the task is bigger, say so and split it.
 
 After writing the plan, call `raise-decision` with the Approve Plan decision and stop. Do not continue until you get an answer.
 
-If the reviewer asks for changes, revise the same plan and ask again. Do not start a new one.
+If the reviewer asks for changes, revise the same plan according to changes given by reviewer and ask again. Do not start a new one.
 
 ## Before you finish
 
