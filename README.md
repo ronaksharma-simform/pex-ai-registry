@@ -56,7 +56,7 @@ skills:
 You are the planner. ...
 ```
 
-Every skill listed under `skills:` must exist in the registry.
+Every skill listed under `skills:` must exist in the AI registry.
 
 ## Workflows
 
