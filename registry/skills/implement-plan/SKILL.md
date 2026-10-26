@@ -1,5 +1,5 @@
 ---
-name: implement-plan
+name: implement-plans
 description: Use to build an approved plan step by step. Follows the plan exactly, checks after each step, flags deviations instead of improvising, and stops after repeated failure.
 compatibility: "Needs read and write access to the project's files and a git working branch."
 allowed-tools:
@@ -11,7 +11,7 @@ allowed-tools:
   - grep
   - execute
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Implement the plan
